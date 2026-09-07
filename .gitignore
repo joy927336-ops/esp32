@@ -1,0 +1,95 @@
+# ============================================================
+# PlatformIO + ESP32 项目 .gitignore
+# 适用于在 VSCode 下使用 PlatformIO 进行 ESP32 开发
+# ============================================================
+
+# ---------- PlatformIO 核心忽略项 ----------
+# 构建目录（含 .pioenvs 编译产物、.piolibdeps 依赖库）
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# 构建缓存数据库（SCons 生成）
+.sconsign.dblite
+
+# ---------- 编译产物（源文件编译后生成） ----------
+# 目标文件
+*.o
+*.obj
+*.slo
+*.lo
+# 预编译头
+*.gch
+*.pch
+# 静态 / 动态库
+*.a
+*.lib
+*.lai
+*.la
+*.so
+*.dylib
+*.dll
+# 可执行文件 / 固件镜像
+*.exe
+*.out
+*.app
+# ESP32 构建产出的固件与镜像
+*.bin
+*.elf
+*.map
+*.hex
+partitions.bin
+bootloader.bin
+boot_app0.bin
+*.dump
+*.img
+
+# ---------- ESP-IDF / ESP32 相关生成文件 ----------
+# menuconfig 生成的配置文件（切换配置会变动，通常不入库）
+sdkconfig
+sdkconfig.old
+sdkconfig.defaults
+
+# ---------- VSCode / PlatformIO IDE ----------
+# PlatformIO 扩展在 .vscode 下生成的构建缓存
+.vscode/.pioenvs/
+.vscode/.piopm/
+# PlatformIO 生成的语法补全缓存
+.clang_complete
+.gcc-flags.json
+# 个人工作区设置（不建议共享，避免覆盖他人配置）
+.vscode/settings.json
+.vscode/launch.json
+.vscode/ipch/
+# IntelliSense / 编译缓存
+*.code-workspace
+
+# ---------- Eclipse / CMake（可选工具链） ----------
+.cproject
+.project
+.settings/
+CMakeLists.txt.user
+compile_commands.json
+
+# ---------- 日志与调试输出 ----------
+*.log
+trace-*.json
+
+# ---------- 操作系统文件 ----------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ---------- 编辑器临时文件 ----------
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+*#
+.vscode/.browse.c_cpp.db*
