@@ -93,3 +93,9 @@ Desktop.ini
 *.tmp
 *#
 .vscode/.browse.c_cpp.db*
+# ---------- 其他一些东西 ----------
+node_modules/      # 依赖目录
+dist/              # 打包产物
+*.log              # 所有日志
+.idea/ .vscode/    # IDE 配置
+secret.env         # 密码/密钥，绝对不能提交！
